@@ -1,0 +1,11 @@
+STEPS TO PERFORM PUSH OPERATION:
+1.sudo apt install git(if git not installed)
+2.git init
+3.git status
+4.git add .
+5.git status
+6.git commit -m "First Commit"
+7.git config --global user.name "sneha0455"
+8.git config --global user.email "245122748049@mvsrec.edu.in"
+9.git remote add origin "https://github.com/sneha0455/App1.git"
+10.git push origin master

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minimal Login Form</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .login {
+      border: 1px solid #ccc;
+      padding: 20px;
+      width: 250px;
+    }
+    input {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login">
+  <h3>Login</h3>
+  <input type="text" id="username" placeholder="Username">
+  <input type="password" id="password" placeholder="Password">
+  <div class="error" id="error-msg"></div>
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+  function login() {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+    const errorMsg = document.getElementById('error-msg');
+
+    if (!username || !password) {
+      errorMsg.textContent = 'Please enter both fields.';
+    } else if (username === 'admin' && password === '1234') {
+      alert('Login successful!');
+      errorMsg.textContent = '';
+    } else {
+      errorMsg.textContent = 'Invalid credentials.';
+    }
+  }
+</script>
+
+</body>
+</html>
+
